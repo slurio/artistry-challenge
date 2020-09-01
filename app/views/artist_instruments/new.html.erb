@@ -1,0 +1,13 @@
+<h1> New Artist Instrument </h1>
+
+<%= form_for @artist_instrument do |f| %>
+<b> <%= f.label :artist %>: </b>
+<%= f.collection_select :artist_id, Artist.all, :id, :name %>
+<br>
+<br>
+<b> <%= f.label :instrument %>: </b>
+<%= f.collection_select :instrument_id, Instrument.all, :id, :name %>
+<br>
+<br>
+<%= f.submit "Create" %>
+<% end %>

@@ -1,0 +1,9 @@
+<h1> All Instruments </h1>
+<hr>
+
+<div>
+    <% @instruments.each do |i| %>
+        <b> Name:</b> <%= i.name %> | <b> Classification:</b> <%= i.classification %>
+        <br>
+    <% end %>
+</div>

@@ -1,0 +1,15 @@
+<h1> <%= @artist.name %> </h1>
+<hr>
+
+<h3> Title: <%= @artist.title %> </h3>
+<h3> Age: <%= @artist.age %> </h3>
+
+<h3> Instruments Played</h3>
+<ul>
+    <% @artist.instruments.each do |i| %>
+    <li> <%= i.name %> </li>
+    <% end %>
+</ul>
+
+<br>
+<%= button_to "All Artist", artists_path, method: :get %>
